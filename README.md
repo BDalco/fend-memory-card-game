@@ -16,5 +16,5 @@ The game board consists of sixteen "cards" arranged in a grid. The deck is made 
 
 ## How to Run
 
-1. [Download]() or [Clone]() the Repository.
+1. [Download](https://github.com/BDalco/fend-memory-card-game.zip) or [Clone](https://github.com/BDalco/fend-memory-card-game.git) the Repository.
 2. Open `index.html` file to view the project in your browser.
