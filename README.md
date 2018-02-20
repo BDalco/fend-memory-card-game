@@ -14,7 +14,7 @@ The game board consists of sixteen "cards" arranged in a grid. The deck is made 
 * If the cards do not match, both cards are flipped face down.
 * The game ends once all cards have been correctly matched.
 
-## How to Run
+## Run
 
 1. [Download](https://github.com/BDalco/fend-memory-card-game.zip) or [Clone](https://github.com/BDalco/fend-memory-card-game.git) the Repository.
 2. Open `index.html` file to view the project in your browser.
