@@ -38,6 +38,17 @@ function randomizeCards() {
     }
 }
 
+// Disable click of the open Cards
+function disableClick() {
+    flippedCards.forEach(function (card) {
+        card.off('click');
+    });
+}
+// enable click on the open card
+function enableClick() {
+    flippedCards[0].click(flipCard);
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -92,6 +103,7 @@ function flipCard() {
 	if (flippedCards.length === 0) {
 		$(this).toggleClass("show open").animateCss('flipInY');
 		flippedCards.push($(this));
+		disableClick();
 	}
 	else if (flippedCards.length === 1) {
 		movesCounter();
@@ -108,12 +120,14 @@ function cardMatch() {
 		console.log("Cards Match, Hooray!");
 		flippedCards[0].addClass("match").animateCss('pulse');
 		flippedCards[1].addClass("match").animateCss('pulse');
+		disableClick();
 		clearCards();
 		setTimeout(checkWin, 1000);
 	}
 	else {
 		flippedCards[0].toggleClass("show open").animateCss('shake');
 		flippedCards[1].toggleClass("show open").animateCss('shake');
+		enableClick();
 		clearCards();
 	}
 }
